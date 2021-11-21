@@ -4,10 +4,11 @@ spring:
   application:
     name: eureka-server
 eureka:
-  instance:
-    hostname: peer1
+#  instance:
+#    hostname: peer1
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: 'http://${eureka.instance.hostname}:${server.port}/eureka'
+      defaultZone: 'http://127.0.0.1:${server.port}/eureka'
+#      defaultZone: 'http://${eureka.instance.hostname}:${server.port}/eureka'
